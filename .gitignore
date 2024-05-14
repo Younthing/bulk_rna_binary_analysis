@@ -1,0 +1,16 @@
+# Ignore all files
+*
+
+# But exclude directories to keep the directory structure
+!*/
+
+# Include specific file types
+!*.R
+!*.r
+!*.yaml
+!*.yml
+!*.py
+!*.sh
+!*.md
+!*.gitignore
+!*.gitmodules

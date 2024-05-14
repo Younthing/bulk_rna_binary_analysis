@@ -1,0 +1,26 @@
+expr_file: "2-GEO校正/batch_normal_matrix.csv"
+group_file: "2-GEO校正/combined_group.csv"
+
+## 全局主题
+theme: "0-my_theme.R"
+
+## 分析
+
+### 差异分析
+diff_analysis:
+
+heatmap:
+  gene_file: "Diff_analysis/top_sig_gene_list_Disorder-Normal.csv"
+  group_levels: c("Disorder", "Normal")
+
+  colors: c("#0547aa", "white", "#f11313") # eval(parse(text = "")) 有安全隐患
+  output_dir: "heatmap"
+  output_file: "heatmap.pdf"
+
+# 后面应该把分析参数和纯绘图分开
+venn:
+  venn_list_files: "./Intersect_gene/*.json" # Sys.glob()
+
+  colors: c("#0547aa", "#f11313","#f0a500","#00a0a0","#a00000")
+  output_dir: "./venn/"
+  output_file: "venn.pdf"

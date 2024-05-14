@@ -1,0 +1,18 @@
+[submodule "analysis_diff_gene_gist"]
+	path = analysis_diff_gene_gist
+	url = ./analysis_diff_gene_gist
+[submodule "plot_boxplot_significance_test_gist"]
+	path = plot_boxplot_significance_test_gist
+	url = ./plot_boxplot_significance_test_gist
+[submodule "plot_heatmap_gist"]
+	path = plot_heatmap_gist
+	url = ./plot_heatmap_gist
+[submodule "pre_geo_download_gist"]
+	path = pre_geo_download_gist
+	url = ./pre_geo_download_gist
+[submodule "pre_normalize_multple_sample_gist"]
+	path = pre_normalize_multple_sample_gist
+	url = ./pre_normalize_multple_sample_gist
+[submodule "pre_normalize_single_sample_gist"]
+	path = pre_normalize_single_sample_gist
+	url = ./pre_normalize_single_sample_gist
