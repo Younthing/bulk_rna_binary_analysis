@@ -1,13 +1,29 @@
-expr_file: "2-GEO校正/batch_normal_matrix.csv"
-group_file: "2-GEO校正/combined_group.csv"
-
-## 全局主题
-theme: "0-my_theme.R"
+# 全局锚点
+global:
+  expr_file: &global_expr_file "2-GEO校正/batch_normal_matrix.csv"
+  group_file: &global_group_file "2-GEO校正/combined_group.csv"
+  contrasts: &global_contrasts c("Disorder-Normal")
+  # 全局主题
+  theme_ggplot_script: &global_theme_script "config_my_theme.R"
 
 ## 分析
 
 ### 差异分析
-diff_analysis:
+analysis:
+  diff_analysis:
+    - name: "limma"
+      expr_file: *global_expr_file
+      group_file: *global_group_file
+      contrasts: *global_contrasts
+      theme_file: *global_theme_script # todo 可优化
+      adjust_method: "BH"
+      logfc_threshold: 0
+    - name: "DESeq2"
+      expr_file: *global_expr_file
+      group_file: *global_expr_file
+      theme_file: *global_theme_script
+      adjust_method: "BH"
+      logfc_threshold: 0
 
 heatmap:
   gene_file: "Diff_analysis/top_sig_gene_list_Disorder-Normal.csv"
