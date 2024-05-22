@@ -16,3 +16,6 @@
 [submodule "pre_normalize_single_sample_gist"]
 	path = pre_normalize_single_sample_gist
 	url = https://github.com/Younthing/pre_normalize_single_sample_gist
+[submodule "plot_gene_localization_gist"]
+	path = plot_gene_localization_gist
+	url = https://github.com/Younthing/plot_gene_localization_gist
